@@ -1,11 +1,10 @@
-<script setup></script>
-
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <NavBar></NavBar>
+  <main>{{children}}</main>
 </template>
+
+<script setup>
+  import NavBar from './components/NavBar.vue'
+</script>
 
 <style scoped></style>
