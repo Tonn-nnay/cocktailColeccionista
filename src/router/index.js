@@ -7,10 +7,10 @@ import ItemDetailPage from '@/components/ItemDetailPage.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    { path: '/', component: HomePage},
-    { path: '/search', component: SearchPage},
-    { path: '/favorites', component: FavoritePage},
-    { path: '/item/:id', component: ItemDetailPage}
+    { path: '/', component: HomePage },
+    { path: '/search', component: SearchPage },
+    { path: '/favorites', component: FavoritePage },
+    { path: '/item/:id', component: ItemDetailPage },
   ],
 })
 
