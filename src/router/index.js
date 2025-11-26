@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomePage from '@/components/HomePage.vue'
-import SearchPage from '@/components/SearchPage.vue'
-import FavoritePage from '@/components/FavoritePage.vue'
-import ItemDetailPage from '@/components/ItemDetailPage.vue'
+import HomePage from '@/pages/HomePage.vue'
+import SearchPage from '@/pages/SearchPage.vue'
+import FavoritePage from '@/pages/FavoritePage.vue'
+import ItemDetailPage from '@/pages/ItemDetailPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

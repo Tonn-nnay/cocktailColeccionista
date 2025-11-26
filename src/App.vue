@@ -1,6 +1,8 @@
 <template>
-  <NavBar></NavBar>
-  <main>{{children}}</main>
+  <NavBar/>
+  <main>
+    <RouterView />
+  </main>
 </template>
 
 <script setup>
