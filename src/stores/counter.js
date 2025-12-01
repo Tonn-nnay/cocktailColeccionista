@@ -4,23 +4,20 @@ export const usePkmStore = defineStore('pkmns', {
   state: () => ({
     /** @type {{ name: string, order: number, height: number, weight: number }[]}*/
     favPkmn: [],
-    /** @type {{ name: string, order: number, height: number, weight: number }[]} */
-    loadedPkm: [],
   }),
   getters: {
-    getAllPkm(state) {
+    getAllFavPkm(state) {
       return state.favPkmn
     },
   },
   actions: {
-    addfavPkm(pkm) {
+    addPkm(pkm) {
       this.favPkmn.push(pkm)
+      console.log('Added Successfully', this.favPkmn)
     },
-    addPkm(pkm){
-      this.loadedPkm.push(pkm)
-    },
-    removePkm(choosenPkm) {
-      this.favPkmn = this.favPkmn.filter((pkm) => pkm !== choosenPkm)
+    removePkm(pkmID) {
+      this.favPkmn = this.favPkmn.filter((pkm) => pkm.order != pkmID)
+      console.log('Deleted Successfully')
     },
     isFavorite(numberPokedex) {
       return this.favPkmn.some((pkm) => pkm.order === numberPokedex)
